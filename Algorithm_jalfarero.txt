@@ -1,0 +1,36 @@
+A1 Algorithm
+
+Step 1:
+Ensure that the arguments fulfill the requirements. The usage function display the proper use of the script if the requirements are not fulfilled, while exiting the module.
+
+Step 2:
+In order for the script to proceed, the required amount of arguments need to be met. Once that occurs, both an array and a hashtable form the information that will connect the user input and our projected output.  Our array [month_name] will
+encompass all 12 months of the year while our hastable [days_in_month] will encompass all days within each specific month, with the months designated by their numberical value according to when they first appear in the fiscal year, for example January
+will be designated the number 1, while July will be designated the number  7. Each month has a specific amount of days attached to it, and therefore the appropriate amount of days will be stored in the hashtable attached to the correct month.
+
+Step 3:
+The sanitize function will utilize both [user_raw_data] and [allow_chars]. The output will create the new variable [dob]. 
+
+Step 4:
+Using [dob] from the previous step, the size_check function will be run with [dob] and the required input length of 8. Should the input character length either exceed or be far fewer than the required 8, an error statement will
+notify the user, and kill the script.
+
+Step 5:
+The variables of year, month, and day will be attached to our previous variable [dob] with specifc areas of the [dob] denoting it's significance.
+The dob[0:4] indicates the first 4 numbers will represent the year (YYYY), dob[4:6] indicates the next 2 numbers will represent the month (MM) and finally dob[6:] indictes the last set of numbers will represent the day (DD).
+
+Step 6:
+Range_check will be used to check the following items:
+
+> Appropriate YYYY range between 1900 and 9999
+> Appropriate MM range between 1 and 12
+> If  the YYYY input is determined to be a leap year, for which a day will be added to February
+> Appropriate DD range between the 1 and the specific max day for the month as determined by the hashtable in Step 2.
+
+Should any of the items above, except the Leap Year, return a False - an error will be displayed to the user, and once again the script will be killed.
+
+Step 7:
+Appropriate format is created for the dob and saved in variable 'new_dob'.
+
+Step 8:
+The date of birth will be printed out in the format: print(new_dob).
